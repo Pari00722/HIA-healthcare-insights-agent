@@ -1,15 +1,15 @@
 import streamlit as st
 from auth.session_manager import SessionManager
 from components.footer import show_footer
-from config.app_config import ANALYSIS_DAILY_LIMIT
 
 def show_sidebar():
     with st.sidebar:
         st.title("💬 Chat Sessions")
+        st.caption("Made by Pari")
 
         if SessionManager.is_demo_mode():
             st.caption("Local demo mode is active")
-        
+
         if st.button("+ New Analysis Session", use_container_width=True):
             if st.session_state.user and 'id' in st.session_state.user:
                 success, session = SessionManager.create_chat_session()
@@ -23,44 +23,16 @@ def show_sidebar():
                 SessionManager.logout()
                 st.rerun()
 
-        # Add analysis counter
-        if 'analysis_count' not in st.session_state:
-            st.session_state.analysis_count = 0
-        
-        remaining = ANALYSIS_DAILY_LIMIT - st.session_state.analysis_count
-        st.markdown(
-            f"""
-            <div style='
-                padding: 0.5rem;
-                border-radius: 0.5rem;
-                background: rgba(100, 181, 246, 0.1);
-                margin: 0.5rem 0;
-                text-align: center;
-                font-size: 0.9em;
-            '>
-                <p style='margin: 0; color: #666;'>Daily Analysis Limit</p>
-                <p style='
-                    margin: 0.2rem 0 0 0;
-                    color: {"#1976D2" if remaining > 3 else "#FF4B4B"};
-                    font-weight: 500;
-                '>
-                    {remaining}/{ANALYSIS_DAILY_LIMIT} remaining
-                </p>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
-
         st.markdown("---")
         show_session_list()
-        
+
         # Logout button
         st.markdown("---")
         logout_label = "Reset Demo Session" if SessionManager.is_demo_mode() else "Logout"
         if st.button(logout_label, use_container_width=True):
             SessionManager.logout()
             st.rerun()
-        
+
         # Add footer to sidebar
         show_footer(in_sidebar=True)
 
