@@ -4,7 +4,6 @@ AI Agent to analyze blood reports and provide detailed health insights.
 
 <p align="center">
   <a href="https://github.com/hia/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg">
   </a>
 </p>
 
@@ -13,7 +12,6 @@ AI Agent to analyze blood reports and provide detailed health insights.
   <a href="#%EF%B8%8F-tech-stack">Tech Stack</a> |
   <a href="#-installation">Installation</a> |
   <a href="#-project-structure">Project Structure</a> |
-  <a href="#-contributing">Contributing</a> |
   <a href="#%EF%B8%8F-author">Author</a>
 </p>
 
