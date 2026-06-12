@@ -3,11 +3,6 @@
 AI Agent to analyze blood reports and provide detailed health insights.
 
 <p align="center">
-  <a href="https://github.com/hia/blob/main/LICENSE">
-  </a>
-</p>
-
-<p align="center">
   <a href="#-features">Features</a> |
   <a href="#%EF%B8%8F-tech-stack">Tech Stack</a> |
   <a href="#-installation">Installation</a> |
@@ -15,9 +10,6 @@ AI Agent to analyze blood reports and provide detailed health insights.
   <a href="#%EF%B8%8F-author">Author</a>
 </p>
 
-<p align="center">
-  <img src="public/HIA_demo.gif" alt="Usage Demo">
-</p>
 
 ## 🌟 Features
 
