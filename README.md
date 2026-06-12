@@ -145,6 +145,10 @@ hia/
 ```
 
 
+## Live Demo
+[Open Streamlit App](https://hia-healthcare-insights-agent-bagxxkdrbsfq7rkdiwpkxa.streamlit.app/)
+
+
 
 ## 🛡️ Author
 
